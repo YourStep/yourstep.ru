@@ -1,0 +1,140 @@
+@-webkit-keyframes pulse
+{
+    0% {-webkit-transform: scale(0.75); opacity: 0;}
+    50% {-webkit-transform: scale(0.75); opacity: 0;}
+    60% {-webkit-transform: scale(0.9); opacity: .5;}
+    80% {-webkit-transform: scale(1.1); opacity: .5;}
+    100% {-webkit-transform: scale(1.3); opacity: 0;}
+}
+
+@-moz-keyframes pulse
+{
+    0% {-webkit-transform: scale(0.75); opacity: 0;}
+    50% {-webkit-transform: scale(0.75); opacity: 0;}
+    60% {-webkit-transform: scale(0.9); opacity: .5;}
+    80% {-webkit-transform: scale(1.1); opacity: .5;}
+    100% {-webkit-transform: scale(1.3); opacity: 0;}
+}
+
+.pulse_holder
+{
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    margin: auto;
+    width: 100px;
+    height: 100px;
+    z-index: 999;
+}
+
+
+
+.pulse_holder .pulse_marker
+{
+    width: 100px;
+    height: 100px;
+    background: url("../img/phone.png") no-repeat center center #FFB433;
+    border-radius: 100%;
+    opacity: .5;
+    z-index: 10;
+    position: relative;
+    box-sizing: border-box;
+    border: 1px solid #FFB433;
+    cursor: pointer;
+}
+
+.pulse_holder .pulse_marker:hover{
+    opacity: 1;
+}
+
+.pulse_holder .pulse_rays
+{
+    margin: 0 auto;
+    position: absolute;
+    right: -25%;
+    top: -25%;
+    z-index: -1;
+    background-color: transparent;
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+    border: 12px solid #FFB433;
+    border-radius: 100%;
+    box-sizing: border-box;
+    /* Giving Animation Function */
+    -webkit-animation: pulse 3s linear infinite;
+    -moz-animation: pulse 3s linear infinite;
+    border-image: initial;
+}
+
+.mycallback-modal, .mycallback-modal2 {
+    width: 645px;
+    height: 337px;
+    background: #FFB433;
+/*    position: fixed;
+    margin: auto;
+    left: 0; right: 0; top: 0; bottom: 0;
+    z-index: 999;*/
+    box-sizing: border-box;
+    padding: 15px 25px;
+    display: none;
+}
+
+
+.mycallback-text{
+    font-family: H_Light;
+    font-size: 26px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.mycallback-modal .input-data-order, .mycallback-modal2 .input-data-order{
+    width: 330px;
+    height: 54px;
+    line-height: 48px;
+    font-family: H_Light;
+    font-size: 22px;
+    padding-left: 12px;
+    border: 1px solid #84d2ff;
+    outline: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mycallback-close{
+    background: url("../img/public/close2.png") center center;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: -36px;
+    right: -46px;
+    cursor: pointer;
+}
+
+.block1{
+    text-align: center;
+}
+
+.mycallback-modal .button, .mycallback-modal2 .button {
+    width: 255px;
+    height: 50px;
+    font-size: 24px;
+}
+
+.mycallback-modal2 .block1 .button{
+    width: 163px;
+    height: 47px;
+    line-height: 40px;
+    margin: 0 5px;
+    padding-top: 0;
+}
+
+.mycallback-modal .timer, .mycallback-modal2 .timer {
+    font-size: 48px;
+    font-family: H_Light;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
